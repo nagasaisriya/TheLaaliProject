@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+
+<body>
+    
+    <div class="container centered">
+    <input type="text" id="id" placeholder="ID">
+    <input type="text" id="mess" placeholder="Message">
+  <!-- <button onclick="hi()" class="submit">Send</button>-->
+  <input type="button" onclick="hi()" value="Submit">
+    <div id="ms_div"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="../config/config.js"></script>
+
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

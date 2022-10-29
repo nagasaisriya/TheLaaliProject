@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/admin_dashboard.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="./homepage.html">THE LAALI PROJECT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link active" href="./homepage.html">Home </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./admin_dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Alumni connect</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/resources/resources.html">Resources</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/test/skilltest.html">Skill Tests</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/opportunities/jobs.html">Career Opportunities</a>
+            </li>
+        </ul>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/client/html/loginpage.html">Login</a> </button>
+    </div>
+</nav>
+
+<div id="Students" class="tabcontent">
+    <img class="image" src="home.jpg" alt="Job Image " width=100%>
+    <div class="centered"><h1><b>Post a Job</b></h1></div><br>
+    <div class="centered2">Post Various Job Opportunities</div>
+  </div>
+  
+  <div id="Teachers" class="tabcontent">
+    <img class="image" src="resources.jpg" alt="Resources Image" width=100%>
+    <div class="centered"><h1><b>Upload a Resource</b></h1></div><br>
+    <div class="centered2">Upload Recorded Webinars, Access Videos and Other Resources</div>
+    <br>
+    <button class="button" id="resourcepost">Upload Resources</button> 
+  </div>
+  
+  <button class="tablink" onclick="openCity('Students', this, '#38A7E3')" id="defaultOpen">Jobs</button>
+  <button class="tablink" onclick="openCity('Teachers', this, '#38A7E3')">Resources</button>
+  <br><br><br><br>
+
+
+  <br /><h1 style="text-align: center;"><b><i class="fas fa-angle-double-left"></i> Admin Portal <i class="fas fa-angle-double-right"></i> </b></h1><hr /><br/><br />
+  <div class="row">
+    <div class="column" >
+           <div class="card">
+                <br><center><h2><b>Post an opportunity</b></h2></center><br>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+                <p><button><a href="../html/opportunities/createJob.html"> Create a new Job </a></button></p>
+           </div>
+    </div>
+<div class="column">
+    <div class="card">
+        <br><center><h2><b>Post<br/> Resources</b></h2></center><br>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+        <p><button><a href="../html/resources/createResource.html"> Add new resources </a></button></p>      
+    </div>
+</div>
+<div class="column" >
+    <div class="card">
+        <br><center><h2><b>Veiw<br/> Opportunities</b></h2></center><br>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+        <p><button><a href="../html/opportunities/jobs.html"> View </a></button></p>
+    </div>
+</div>
+</div>
+<br>
+<div class="row">
+    <div class="column" >
+          <div class="card">
+            <br><center><h2><b>View<br/> Resources</b></h2></center><br>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+            <p><button><a href="../html/resources/resources.html"> Create a new Job </a></button></p>
+           </div>
+     </div>
+     <div class="column">
+            <div class="card">
+                <br><center><h2><b>Edit<br/> Opportunities</b></h2></center><br>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+                <p><button><a href="../html/opportunities/editJob.html">Edit</a></button></p>
+             </div>
+      </div>
+<div class="column" >
+       <div class="card">
+            <br><center><h2><b>Edit<br/> Resources</b></h2></center><br>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p><br>
+            <p><button><a href="">Edit</a></button></p>
+       </div>
+</div>
+</div>
+
+<br /><br />
+
+<script src="https://kit.fontawesome.com/a91f5817aa.js" crossorigin="anonymous"></script>
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
